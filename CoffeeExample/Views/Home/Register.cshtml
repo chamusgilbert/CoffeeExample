@@ -1,0 +1,61 @@
+﻿@model Lab20.Models.Register
+@{
+    ViewBag.Title = "Register"; 
+}
+<style>
+.centerElement{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+p,h1,h2,h3,h4,h5{
+    text-align:center;
+}
+</style>
+
+
+<h3>@ViewBag.Message</h3>
+
+<div>
+    <br />
+    <form style="width:100px;" class="centerElement" name="Reg" onsubmit="return " action="Success" method="post">
+        <p><em>First Name:</em></p>
+        <input type="text" name="FirstName" required />
+        <p><em>Last Name:</em></p>
+        <input type="text" name="LastName" required />
+        <p><em>Email:</em></p>
+        <input type="email" name="Email" required />
+        <p><em>Set Password</em></p>
+        <input type="password" name="Password" value="" />
+        <p>Phone Number:</p>
+        <input type="tel" name="Phone" />
+        <p><em>*Optional*</em></p>
+        <em><input type="checkbox" name="emailMe" value=""/>email me with updates</em>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</div>
+
+@*<script>
+    function validateForm() {
+        var fName = document.forms["Reg"]["FirstName"].value;
+        if (fName == "") {
+            alert("First Name must be filled out");
+            return false;
+        }
+
+        var lName = document.forms["Reg"]["LastName"].value;
+        if (lName == "") {
+            alert("Last Name must be filled out");
+            return false;
+        }
+
+        var email = document.forms["Reg"]["email"].value;
+        if (email == "") {
+            alert("Email Must filled out");
+            return false;
+        }
+
+    }
+</script>*@
+
+
